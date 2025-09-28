@@ -34,6 +34,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
 
-Console.WriteLine(ds.Calculate(a, x, y));
+double result = ds.Calculate(a, x, y);
+Console.WriteLine($"{result:F2}");
 
 Console.ReadLine();

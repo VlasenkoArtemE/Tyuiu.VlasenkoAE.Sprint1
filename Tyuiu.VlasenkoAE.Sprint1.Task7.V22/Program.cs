@@ -1,4 +1,4 @@
-﻿using Tyuiu.VlasenkoAE.Sprint1.Task6.V17.Lib;
+﻿using Tyuiu.VlasenkoAE.Sprint1.Task7.V22.Lib;
 
 DataService ds = new DataService();
 
@@ -6,30 +6,32 @@ Console.Title = "Спринт #1 | Выполнил: Власенко А. Е. | 
 
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* Спринт #1                                                               *");
-Console.WriteLine("* Тема: Работа со строками, класс String                                  *");
-Console.WriteLine("* Задание #6                                                              *");
-Console.WriteLine("* Вариант #17                                                             *");
+Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+Console.WriteLine("* Задание #7                                                              *");
+Console.WriteLine("* Вариант #22                                                             *");
 Console.WriteLine("* Выполнил: Власенко Артём Евгеньевич | ИСТНб-25-1                        *");
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* УСЛОВИЕ:                                                                *");
-Console.WriteLine("* Написать программу: пользователь вводит текст. Проверить, что           *");
-Console.WriteLine("* строка является перевертышем.                                           *");
-Console.WriteLine("*                                                                         *");
+Console.WriteLine("* Написать программу, которая вычисляет математическое выражение          *");
+Console.WriteLine("* по исходным значениям данных, вводимых пользователем.                   *");
+Console.WriteLine("* Ответ округлить до 3 знаков после запятой.                              *");
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
+Console.WriteLine("* z = (1 - tan x) ^ (ctg x) + cos (x - y)                                 *");
 
-Console.WriteLine("Введите текст: ");
-string str = Console.ReadLine();
+double x, y, z;
+
+Console.WriteLine("Введите значение X:");
+x = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите значение Y:");
+y = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
 
-if (ds.CheckPalindrome(str) == true)
-    Console.WriteLine("Строка является перевертышем.");
-else
-    Console.WriteLine("Строка не является перевертышем.");
+Console.WriteLine("z = " + ds.Calculate(x, y));
 
-    Console.ReadKey();
-
+Console.ReadKey();
